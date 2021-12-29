@@ -21,39 +21,34 @@ class Gallery1 extends StatelessWidget {
         ],
         backgroundColor: Colors.redAccent,
       ),
-      body: Row(
-        children: [
-          Container(
-            // height: MediaQuery.of(context).devicePixelRatio,
-            // width: MediaQuery.of(context).devicePixelRatio,
-            child: ElevatedButton(
-              onPressed: () {
-                Get.back();
-              },
-              child: Text("Back"),
-              style: ElevatedButton.styleFrom(
-                primary: Colors.redAccent, // background
-                onPrimary: Colors.white, // foreground
+      body: Center(
+        child: SingleChildScrollView(
+          child: Wrap(
+            alignment: WrapAlignment.center,
+            children: [
+              Container(
+                alignment: Alignment.topCenter,
+                child: BackButton(),
               ),
-            ),
+              ImageImp(
+                imgUrl:
+                    'https://images.pexels.com/photos/33688/delicate-arch-night-stars-landscape.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+              ),
+              ImageImp(
+                imgUrl:
+                    'https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+              ),
+              ImageImp(
+                imgUrl:
+                    'https://images.pexels.com/photos/3244513/pexels-photo-3244513.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+              ),
+              ImageImp(
+                imgUrl:
+                    'https://images.pexels.com/photos/2422915/pexels-photo-2422915.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+              ),
+            ],
           ),
-          ImageImp(
-            imgUrl:
-                'https://images.unsplash.com/photo-1639195276454-f0ec20b5bcb6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
-          ),
-          ImageImp(
-            imgUrl:
-                'https://images.unsplash.com/photo-1639154872768-355420897b41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
-          ),
-          ImageImp(
-            imgUrl:
-                'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-          ),
-          ImageImp(
-            imgUrl:
-                'https://images.unsplash.com/photo-1586348943529-beaae6c28db9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=415&q=80',
-          ),
-        ],
+        ),
       ),
     );
   }

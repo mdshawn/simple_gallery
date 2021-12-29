@@ -2,9 +2,14 @@ import 'package:flutter/widgets.dart';
 
 class ImageImp extends StatelessWidget {
   final String imgUrl;
+  final double width;
+  final double height;
+
   const ImageImp({
     Key? key,
     required this.imgUrl,
+    this.width = 300,
+    this.height = 250,
   }) : super(key: key);
 
   @override
@@ -12,8 +17,8 @@ class ImageImp extends StatelessWidget {
     return Container(
         child: Image.network(
       "$imgUrl",
-      width: 300.0,
-      height: 200,
+      width: width,
+      height: height,
     ));
   }
 }
